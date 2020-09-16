@@ -14,7 +14,7 @@ app.get('/', function (req, res) {
     https.get(url, function(response) {
         console.log(response.statusCode);
 
-        $("h1").text(response.statusCode);
+        $("h1").text(response.statusCode); // code
         response.on("data", function(stuff) {
             const weatherData = JSON.parse(stuff);
             console.log(weatherData);
